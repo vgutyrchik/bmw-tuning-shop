@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тюнинг обвесы для BMW</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(90deg, #000, #2c3e50);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ccc;
+    }
+    .intro {
+      padding: 50px 20px;
+      text-align: center;
+      background: #222;
+    }
+    .intro h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    .intro p {
+      color: #bbb;
+    }
+    .models {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background: #1e1e1e;
+    }
+    .model-card {
+      background: #2b2b2b;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .model-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+    .model-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+    .model-card div {
+      padding: 15px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .cart {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BMW Tuning Shop</h1>
+    <p>Эксклюзивные обвесы для вашего BMW — стиль, агрессия, индивидуальность</p>
+  </header>
+
+  <div class="cart" onclick="alert('Корзина пока пуста.')">
+    🛒 Корзина
+  </div>
+
+  <section class="intro">
+    <h1>Выберите вашу модель BMW</h1>
+    <p>Подберите обвесы под кузов и преобразите ваш автомобиль</p>
+  </section>
+
+  <section class="models">
+    <div class="model-card" onclick="openModel('F30')">
+      <img src="https://i.ibb.co/T2mr6p3/f30.jpg" alt="BMW F30">
+      <div>BMW F30</div>
+    </div>
+    <div class="model-card" onclick="openModel('F32')">
+      <img src="https://i.ibb.co/YR0Qckd/f32.jpg" alt="BMW F32">
+      <div>BMW F32</div>
+    </div>
+    <div class="model-card" onclick="openModel('G20')">
+      <img src="https://i.ibb.co/v3dchG4/g20.jpg" alt="BMW G20">
+      <div>BMW G20</div>
+    </div>
+    <div class="model-card" onclick="openModel('G30')">
+      <img src="https://i.ibb.co/Nmb8PQH/g30.jpg" alt="BMW G30">
+      <div>BMW G30</div>
+    </div>
+    <div class="model-card" onclick="openModel('G22')">
+      <img src="https://i.ibb.co/Z1XvWHy/g22.jpg" alt="BMW G22">
+      <div>BMW G22</div>
+    </div>
+    <div class="model-card" onclick="openModel('E34')">
+      <img src="https://i.ibb.co/GM0n4NM/e34.jpg" alt="BMW E34">
+      <div>BMW E34</div>
+    </div>
+    <div class="model-card" onclick="openModel('E39')">
+      <img src="https://i.ibb.co/k3Sk3pv/e39.jpg" alt="BMW E39">
+      <div>BMW E39</div>
+    </div>
+    <div class="model-card" onclick="openModel('E46')">
+      <img src="https://i.ibb.co/NW0mMz7/e46.jpg" alt="BMW E46">
+      <div>BMW E46</div>
+    </div>
+    <div class="model-card" onclick="openModel('E92')">
+      <img src="https://i.ibb.co/9s6vSYg/e92.jpg" alt="BMW E92">
+      <div>BMW E92</div>
+    </div>
+    <div class="model-card" onclick="openModel('F15')">
+      <img src="https://i.ibb.co/2sYHTNN/f15.jpg" alt="BMW F15">
+      <div>BMW F15</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BMW Tuning Shop. Все права защищены.</p>
+  </footer>
+
+  <script>
+    function openModel(model) {
+      alert('Открывается список товаров для BMW ' + model);
+      // В будущем: window.location.href = '/models/' + model.toLowerCase() + '.html';
+    }
+  </script>
+</body>
+</html>
