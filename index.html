@@ -68,6 +68,8 @@
       background: #f5f5f5;
       padding: 15px;
       border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
     }
     #description img {
       width: 100%;
@@ -124,6 +126,24 @@
     .social-icons a:hover {
       color: #00bcd4;
     }
+
+    /* Hidden menu */
+    .hidden-menu {
+      display: none;
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .hidden-menu a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+    .hidden-menu a:hover {
+      background-color: #ddd;
+    }
   </style>
 </head>
 <body>
@@ -145,10 +165,22 @@
       <h2 class="section-title">Про компанію</h2>
       <p>Ми спеціалізуємося на продажу та встановленні тюнингових обвісів для автомобілів BMW. Наш асортимент включає широкий вибір продукції, від бамперів до комплектів для модифікації кузова. Висока якість, надійність та стиль — це те, що ми пропонуємо нашим клієнтам! Залишаючи свій автомобіль у нас, ви отримуєте не лише покращену естетику, але й можливість підвищити його продуктивність. Ми маємо досвід і знання, щоб зробити ваш BMW унікальним.</p>
     </div>
-    <div class="right-widget">
+    <div class="right-widget" onclick="toggleMenu()">
       <img src="https://i.ibb.co/ywf5z79/image.png" alt="BMW M Series">
+      <p>Натисніть для вибору категорій</p>
     </div>
   </section>
+
+  <!-- Hidden menu that appears when clicking the widget -->
+  <div id="menu" class="hidden-menu">
+    <a href="#">Комплекти обвісів</a>
+    <a href="#">Бампери</a>
+    <a href="#">Накладки на дзеркала</a>
+    <a href="#">Оптика</a>
+    <a href="#">Елементи салону</a>
+    <a href="#">Решітки радіатору</a>
+    <a href="#">Діффузори та спліттери</a>
+  </div>
 
   <section id="promo">
     <h2 class="section-title">🔥 Актуальні Акції</h2>
@@ -239,6 +271,13 @@
       <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
